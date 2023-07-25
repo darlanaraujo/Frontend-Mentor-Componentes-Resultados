@@ -1,1 +1,62 @@
 @import 'padrao';
+
+.page {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $azulClaro;
+
+    .modal {
+        width: 740px;
+        height: 515px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background-color: $branco;
+        border-radius: 40px;
+
+        .box-resultado {
+            background-image: linear-gradient($azulArdosiaClaro, $azulRoyalClaro);
+            border-radius: 40px;
+            padding: 40px 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            text-align: center;
+            color: $lavandaClara;
+
+            .titulo {
+                font-size: 25px;
+            }
+
+            .circulo {
+                width: 200px;
+                height: 200px;
+                border-radius: 100%;
+                background-image: linear-gradient($azulVioleta, $azulPersa);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                .pontuacao {
+                    font-size: 4em;
+                    font-weight: 800;
+                    color: $branco;
+                }
+
+                .texto {
+                    opacity: .5;
+                }
+            }
+
+            .titulo-principal {
+                font-size: 30px;
+                font-weight: 700;
+                color: $branco;
+            }
+
+        }
+    }
+}

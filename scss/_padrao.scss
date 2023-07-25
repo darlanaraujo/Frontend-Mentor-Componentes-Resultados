@@ -1,5 +1,27 @@
+// Cores Principais
+$vermelhoClaro: hsl(0, 100%, 67%);
+$amareloAlaranjado: hsl(39, 100%, 56%);
+$verdeAzulado: hsl(166, 100%, 37%);
+$azulCobalto: hsl(234, 85%, 45%);
+
+// Gratientes
+$azulArdosiaClaro: hsl(252, 100%, 67%); //Fundo
+$azulRoyalClaro: hsl(241, 81%, 54%); // Fundo
+$azulVioleta: hsla(256, 72%, 46%, 1); // Circulo
+$azulPersa: hsla(241, 72%, 46%, 0); // Circulo
+
+// Neutros
+$branco: hsl(0, 0%, 100%);
+$azulClaro: hsl(221, 100%, 96%);
+$lavandaClara: hsl(241, 100%, 89%);
+$azulCinzaEscuro: hsl(224, 30%, 27%);
+
+// Geral
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: 18px;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-weight: 400;
 }
