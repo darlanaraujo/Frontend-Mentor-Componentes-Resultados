@@ -1,4 +1,5 @@
 @import 'padrao';
+@import 'mobile';
 
 .page {
     width: 100%;
@@ -7,14 +8,30 @@
     justify-content: center;
     align-items: center;
     background-color: $azulClaro;
+    transition: 1s;
+
+    @include tablet {
+        // display: block;
+        align-items: flex-start;
+    }
 
     .modal {
         width: 740px;
-        height: 515px;
+        // height: 515px;
+        min-height: 515px;
         display: grid;
         grid-template-columns: 1fr 1fr;
         background-color: $branco;
         border-radius: 40px;
+        box-shadow: 2px 2px 30px 15px rgba($azulCobalto, .1);
+        transition: 1s;
+
+        @include tablet {
+            transition: 1s all;
+            display: block;
+            width: 100%;
+            min-height: none;
+        }
 
         .box-resultado {
             background-image: linear-gradient($azulArdosiaClaro, $azulRoyalClaro);
@@ -26,9 +43,23 @@
             justify-content: space-around;
             text-align: center;
             color: $lavandaClara;
+            gap: 25px;
+            transition: 1s all;
+
+            @include tablet {
+                transition: 1s all;
+                gap: 15px;
+                padding: 40px;
+                border-radius: 0 0 40px 40px;
+            }
 
             .titulo {
                 font-size: 25px;
+
+                @include mobile {
+                    transition: 1s all;
+                    font-size: 20px;
+                }
             }
 
             .circulo {
@@ -39,11 +70,24 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
+                transition: 1s all;
+
+                @include mobile {
+                    transition: 1s all;
+                    width: 140px;
+                    height: 140px;
+                }
 
                 .pontuacao {
                     font-size: 4em;
-                    font-weight: 800;
+                    font-weight: 700;
                     color: $branco;
+                    transition: 1s all;
+
+                    @include mobile {
+                        transition: 1s all;
+                        font-size: 3em;
+                    }
                 }
 
                 .texto {
@@ -55,8 +99,121 @@
                 font-size: 30px;
                 font-weight: 700;
                 color: $branco;
+                transition: 1s all;
+
+                @include mobile {
+                    transition: 1s all;
+                    font-size: 25px;
+                }
             }
 
+        }
+
+        .box-sumario {
+            padding: 40px;
+            transition: 1s all;
+
+            @include mobile {
+                transition: 1s all;
+                padding: 20px 40px;
+            }
+
+            .titulo {
+                font-size: 23px;
+                font-weight: 500;
+                color: $azulCinzaEscuro;
+                transition: 1s all;
+
+                @include mobile {
+                    transition: 1s all;
+                    font-size: 20px;
+                }
+            }
+
+            .box-card {
+                transition: 1s all;
+                margin: 30px 0px;
+
+                @include mobile {
+                    transition: 1s all;
+                    margin: 20px 0;
+                }
+
+                .card {
+                    display: flex;
+                    justify-content: space-between;
+                    border-radius: 10px;
+                    padding: 20px;
+                    margin-bottom: 20px;
+                    color: $azulCinzaEscuro;
+
+                    & div {
+                        display: flex;
+                        gap: 10px;
+
+                        &:nth-child(1) {
+                            opacity: .8;
+                        }
+                    }
+
+                    .percentual {
+                        .score {
+                            font-weight: 700;
+                        }
+                        .texto {
+                            opacity: .7;
+                            font-weight: 700;
+                        }
+                    }
+                }
+
+                .card-reaction {
+                    background-color: rgba($vermelhoClaro, .1);
+
+                    .category {
+                        color: $vermelhoClaro;
+                    }
+                }
+
+                .card-memory {
+                    background-color: rgba($amareloAlaranjado, .1);
+
+                    .category {
+                        color: $amareloAlaranjado;
+                    }
+                }
+
+                .card-verbal {
+                    background-color: rgba($verdeAzulado, .1);
+
+                    .category {
+                        color: $verdeAzulado;
+                    }
+                }
+
+                .card-visual {
+                    background-color: rgba($azulCobalto, .1);
+
+                    .category {
+                        color: $azulCobalto;
+                    }
+                }
+            }
+
+            .btn-continue {
+                border: none;
+                background-color: $azulCinzaEscuro;
+                padding: 15px;
+                margin-bottom: 20px;
+                width: 100%;
+                border-radius: 40px;
+                color: $branco;
+
+                &:hover {
+                    background-image: linear-gradient($azulArdosiaClaro, $azulRoyalClaro);
+                    cursor: pointer;
+                }
+            }
         }
     }
 }
